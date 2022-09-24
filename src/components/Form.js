@@ -9,9 +9,9 @@ const Form = () => {
         console.log('todos', todos);
     }, [todos]);
 
-    const submitHandler = () => {
+    const submitHandler = (e) => {
         let uuid = crypto.randomUUID();
-        setTodos([
+        name && setTodos([
             ...todos,
             {
                 id: uuid,
