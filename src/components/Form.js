@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import List from './List'
+import List from './List';
 
 const Form = () => {
     const [name, setName] = useState('');
@@ -20,16 +20,23 @@ const Form = () => {
             },
         ]);
     };
+
+    const deleteTodo = (id) => {
+        let result = todos.filter((todo) => todo.id !== id);
+        setTodos(result);
+    };
+
     return (
         <>
-            <div>Form</div>
+            <div>Todo</div>
             <input
                 type='text'
+                placeholder='Enter tasks'
                 onChange={(e) => setName(e.target.value)}
             ></input>
-            <button type='submit' onClick={(e) => submitHandler()}></button>
+            <button type='submit' onClick={e=>submitHandler(e)}>submit</button>
             <br />
-            <List todo={todos}/>
+            <List todo={todos} deleteTodo={deleteTodo} />
         </>
     );
 };

@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-const List = ({ todo }) => {
+const List = ({ todo, deleteTodo }) => {
     return (
         <ol>
             {todo?.map((item) => (
-                <li key={item.id}>{item?.name}</li>
+                <Fragment key={item.id}>
+                    <li draggable>{item?.name}</li>
+                    <button onClick={e=>deleteTodo(item.id)}>X</button>
+                </Fragment>
             ))}
         </ol>
     );
