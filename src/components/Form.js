@@ -9,7 +9,7 @@ const Form = () => {
         console.log('todos', todos);
     }, [todos]);
 
-    const submitHandler = (e) => {
+    const submitTodo = (e) => {
         let uuid = crypto.randomUUID();
         name && setTodos([
             ...todos,
@@ -34,7 +34,7 @@ const Form = () => {
                 placeholder='Enter tasks'
                 onChange={(e) => setName(e.target.value)}
             ></input>
-            <button type='submit' onClick={e=>submitHandler(e)}>submit</button>
+            <button type='submit' onClick={e=>submitTodo(e)}>submit</button>
             <br />
             <List todo={todos} deleteTodo={deleteTodo} />
         </>
