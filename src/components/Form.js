@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import List from './List';
 
 const Form = () => {
@@ -21,10 +21,10 @@ const Form = () => {
         ]);
     };
 
-    const deleteTodo = (id) => {
+    const deleteTodo = useCallback((id) => {
         let result = todos.filter((todo) => todo.id !== id);
         setTodos(result);
-    };
+    },[todos]);
 
     return (
         <>
