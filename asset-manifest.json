@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/over-engineered-todo/static/css/main.073c9b0a.css",
+    "main.js": "/over-engineered-todo/static/js/main.e85da576.js",
+    "index.html": "/over-engineered-todo/index.html",
+    "main.073c9b0a.css.map": "/over-engineered-todo/static/css/main.073c9b0a.css.map",
+    "main.e85da576.js.map": "/over-engineered-todo/static/js/main.e85da576.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.e85da576.js"
+  ]
+}
